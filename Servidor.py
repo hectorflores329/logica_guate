@@ -21,12 +21,15 @@ def UpdateDatabase():
         datasetFinalTweet()
         print("Los tweet se cargaron correctamente...")
     except:
-        print("Error al cargar los Tweet")
+        print("Error al cargar los Tweet")'''
+
+    datasetFinalTweet()
+
     try:
         bingNews()
         print("Las noticias se cargaron correctamente...")
     except:
-        print("Error al cargar las noticias")'''
+        print("Error al cargar las noticias")
     try:
         guardarDataCovid()
         print("Los datos de datacovid se cargaron correctamente...")
