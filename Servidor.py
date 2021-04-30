@@ -17,7 +17,7 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64
 #************************************Bucle general********************************************************
 def UpdateDatabase():
     print("Comenzo...")
-    try:
+    '''try:
         datasetFinalTweet()
         print("Los tweet se cargaron correctamente...")
     except:
@@ -26,7 +26,7 @@ def UpdateDatabase():
         bingNews()
         print("Las noticias se cargaron correctamente...")
     except:
-        print("Error al cargar las noticias")
+        print("Error al cargar las noticias")'''
     try:
         guardarDataCovid()
         print("Los datos de datacovid se cargaron correctamente...")
@@ -126,7 +126,7 @@ def datasetFinalTweet():
                 "GuatemalaGob",
                 "mingobguate",
                 "ejercito_gt",
-                "GUATEMINECO",
+                "GUATEMINECO", # Cuenta inexistente
                 "MinFinGT",
                 "MinSaludGuate",
                 "MigracionGuate",
