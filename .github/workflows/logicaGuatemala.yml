@@ -23,7 +23,7 @@ jobs:
 
     - name: Ejecutando archivo PY
       run: |
-        python ServidorAction.py
+        python Servidor.py
 
     - uses: stefanzweifel/git-auto-commit-action@v2
       with:
