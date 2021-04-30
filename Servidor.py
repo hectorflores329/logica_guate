@@ -139,7 +139,7 @@ def datasetFinalTweet():
     data = pd.concat(salida)
     data = data.sort_values(by=['FechaAux'])
     del data["FechaAux"]
-    data.to_csv("../Datos_Guatemala/Twitter/Tweet.csv", index=False)
+    data.to_csv("Twitter/Tweet.csv", index=False)
     return data
 
 #tweepy.Cursor(api.search, q='#मराठी OR #माझाक्लिक OR #म')
@@ -246,7 +246,7 @@ def bingNews(pais = "Guatemala"):
     data = pd.DataFrame(salida)[["name","url","description","datePublished","imagen","pais","Fuente"]]
     data["datePublished"] = data["datePublished"].apply(fechaCorrecta)
     data["imagen"] = data["imagen"].apply(reemplazarFinal)
-    data[::-1].to_csv("../Datos_Guatemala/bing/news/Guatemala.csv",index=False)
+    data[::-1].to_csv("bing/news/Guatemala.csv",index=False)
     return
 #************************************Actualizar BING NEWS*******************************************
 #************************************Actualizar Datos de la organizacion*******************************************
