@@ -47,7 +47,7 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v2
       with:
         commit_message: "Datos Guatemala"
-        branch: master
+        branch: main
         # Optional glob pattern of files which should be added to the commit
         #file_pattern: /
 
