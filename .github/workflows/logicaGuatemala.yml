@@ -21,9 +21,28 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Ejecutando archivo PY
+    - name: Creating secret JSON
+      env:
+        TEXTO1: '{"twitter":{"token_acceso" : "'
+        CODE1: ${{ secrets.TOKEN_ACCESO }}
+
+        TEXTO2: '","secreto_token_acceso" : "'
+        CODE2: ${{ secrets.SECRETO_TOKEN_ACCESO }}
+
+        TEXTO3: '","clave_api" : "'
+        CODE3: ${{ secrets.CLAVE_API }}
+
+        TEXTO4: '","clave_secreta_api" : "'
+        CODE4: ${{ secrets.CLAVE_SECRETA_API }}
+
+        TEXTO5: '"},"correo":{"username" : "informaticasudaustral@gmail.com","password" : "Sud.Info91"}}'
+
       run: |
+        echo $TEXTO1$CODE1$TEXTO2$CODE2$TEXTO3$CODE3$TEXTO4$CODE4$TEXTO5 > keys.json
+
         python Servidor.py
+
+        rm keys.json
 
     - uses: stefanzweifel/git-auto-commit-action@v2
       with:

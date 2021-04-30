@@ -31,7 +31,7 @@ def UpdateDatabase():
         guardarDataCovid()
         print("Los datos de datacovid se cargaron correctamente...")
     except:
-        print("Los datos de datacovid NO se cargaron correctamente...")
+        print("Los datos de datacovid no se cargaron correctamente...")
 
     return
 
