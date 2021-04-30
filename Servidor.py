@@ -129,7 +129,7 @@ def datasetFinalTweet():
                 "GuatemalaGob",
                 "mingobguate",
                 "ejercito_gt",
-                "GUATEMINECO", # Cuenta inexistente
+                # "GUATEMINECO", # Cuenta inexistente
                 "MinFinGT",
                 "MinSaludGuate",
                 "MigracionGuate",
